@@ -1,7 +1,7 @@
 let express = require('express')
 let router = express.Router();
 let mongoose = require('mongoose');
-let Book = require('../models/book');
+let Record = require('../models/record');
 
 // get method -> extract and read something
 // post method --> post something
@@ -9,20 +9,20 @@ let Book = require('../models/book');
 // delete method --> delete something
 // CRUD --> Create, Read, Update, Delete 
 
-// Get route for the read book list -- Read Operation
+// Get route for the read record list -- Read Operation
 router.get('/', async(req, res, next)=>{
     try{
-        const BookList = await Book.find();
-        //console.log(BookList);
-        res.render('Books/list', {
-            title: 'Books',
-            BookList:BookList,
+        const RecordList = await Record.find();
+        console.log(RecordList);
+        res.render('Records/list', {
+            title: 'Incident Report',
+            RecordList:RecordList,
             }
         )
     }
     catch(err){
         console.error(err);
-        res.render('Books/list',{
+        res.render('Records/list',{
             error:'Error on server'
         })
     }
@@ -31,14 +31,14 @@ router.get('/', async(req, res, next)=>{
 // Get route for displaying the add page - Create Operation
 router.get('/add', async(req, res, next)=>{
     try{
-        res.render('Books/add',{
-            title: 'Add a Book'
+        res.render('Records/add',{
+            title: 'Add a Incident Report'
         })
 
     }
     catch(err){
         console.error(err);
-        res.render('Books/list',{
+        res.render('Records/list',{
             error:'Error on server'
         })
     }
@@ -46,21 +46,23 @@ router.get('/add', async(req, res, next)=>{
 // Post route for processing the add page - Create Operation
 router.post('/add', async(req, res, next)=>{
     try{
-        let newBook = Book({
+        let newRecord = Record({
             'name': req.body.name,
-            'author': req.body.author,
+            'insuranceNum': req.body.insuranceNum,
             'description': req.body.description,
-            'price': req.body.price,
+            'date': req.body.date,
+            'carModel': req.body.carModel,
+            'licensePlate': req.body.licensePlate,
         });
-        Book.create(newBook).then(()=>{
-            res.redirect('/books')
+        Record.create(newRecord).then(()=>{
+            res.redirect('/records')
         }
         )
     }
 
     catch(err){
         console.error(err);
-        res.render('Books/add',{
+        res.render('Records/add',{
             error:'Error on server'
         })
     }
@@ -71,11 +73,11 @@ router.post('/add', async(req, res, next)=>{
 router.get('/edit/:id', async(req, res, next)=>{
     try{
         const id = req.params.id;
-        const bookToEdit = await Book.findById(id);
-        res.render("Books/edit",
+        const recordToEdit = await Record.findById(id);
+        res.render("Records/edit",
             {
-                title: 'Edit Book',
-                Book: bookToEdit
+                title: 'Edit Record',
+                Record: recordToEdit
             }
         )
     }
@@ -89,16 +91,17 @@ router.get('/edit/:id', async(req, res, next)=>{
 router.post('/edit/:id', async(req, res, next)=>{
     try{
         let id = req.params.id;
-        let updateBook = Book({
+        let updateRecord = Record({
             "_id": id,
             "name": req.body.name,
-            "author": req.body.author,
-            "published": req.body.published,
+            "insuranceNum": req.body.insuranceNum,
             "description": req.body.description,
-            "price": req.body.price,
+            "date": req.body.date,
+            "carModel": req.body.carModel,
+            "licensePlate": req.body.licensePlate,
         })
-        Book.findByIdAndUpdate(id, updateBook).then(()=>{
-            res.redirect("/books")
+        Record.findByIdAndUpdate(id, updateRecord).then(()=>{
+            res.redirect("/records")
         })
     }
     catch(err)
@@ -113,8 +116,8 @@ router.post('/edit/:id', async(req, res, next)=>{
 router.get('/delete/:id', async(req, res, next)=>{
     try{
         let id = req.params.id;
-        Book.deleteOne({_id:id}).then(()=>{
-            res.redirect("/books")
+        Record.deleteOne({_id:id}).then(()=>{
+            res.redirect("/records")
         })
     }
     catch(err)
