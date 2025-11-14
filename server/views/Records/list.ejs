@@ -18,11 +18,8 @@
                     <th class="text-center col-1">Date</th>
                     <th class="text-center col-2">Car Model</th>
                     <th class="text-center col-1">License Plate</th>
-<<<<<<< HEAD
                     <th class="text-center col-1">Edit</th>
                     
-=======
->>>>>>> a14b23b428de838bf37acc64262bcc9f15737e72
                 </tr>
                 <!--For/while loop-->
                 <%for(let count=0; count <RecordList.length; count++) {%>
@@ -32,11 +29,7 @@
                         <td class="text-center col-4"><%=RecordList[count].description%></td>
                         <td class="text-center col-1"><%=RecordList[count].date%></td>
                         <td class="text-center col-2"><%=RecordList[count].carModel%></td>
-<<<<<<< HEAD
                         <td class="text-center col-1"><%=RecordList[count].licensePlate%></td>
-=======
-                        <t` class="text-center col-1"><%=RecordList[count].licensePlate%></td>
->>>>>>> a14b23b428de838bf37acc64262bcc9f15737e72
                         <td class="text-center col-1">
                         <a href="/records/edit/<%=RecordList[count]._id%>" class="btn btn-primary btn-sm">
                             <i class="fas fa-pencil-alt"></i>Edit</a></td>
