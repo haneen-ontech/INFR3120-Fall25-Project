@@ -1,0 +1,41 @@
+<%- include ../partials/header.ejs %>   
+<%- include ../partials/main_nav.ejs %>
+<!--Content for adding the book-->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%=title%></h1>
+
+            <form class="form" method="post">
+                <div class="form-group">
+                    <label for="nameTextField">Book Title</label>
+                    <input type="text" class="form-control" id="nameTextField" placeholder="Enter the book name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="authorTextField">Author Name</label>
+                    <input type="text" class="form-control" id="authorTextField" placeholder="Enter the author name" name="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="publishedTextField">Year of publication</label>
+                    <input type="text" class="form-control" id="publishedTextField" placeholder="Enter the year of publication" name="published" required>
+                </div>
+                <div class="form-group">
+                    <label for="descriptionTextArea">Description</label>
+                    <textarea type="text" class="form-control" id="descriptionTextArea" placeholder="Enter brief description for the book" name="description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="priceTextField">Price</label>
+                    <input type="text" class="form-control" id="priceTextField" placeholder="Enter the price" name="price" required>
+                </div>
+                <br>
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit
+                </button>
+                <a href="/books" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include ../partials/footer.ejs %> 
