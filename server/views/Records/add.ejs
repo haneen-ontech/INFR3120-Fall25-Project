@@ -1,0 +1,46 @@
+<%- include ../partials/header.ejs %> <!--Header--> 
+<%- include ../partials/main_nav.ejs %> <!--Main Navigation-->
+
+<!--Content for adding the book-->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6"> <!--Centered column-->
+            <h1><%=title%></h1>
+
+            <form class="form" method="post"> <!--Form with post method-->
+                <div class="form-group"><!--form group for name-->
+                    <label for="nameTextField">Name</label> <!--label for name-->
+                    <input type="text" class="form-control" id="nameTextField" placeholder="Enter first & last name" name="name" required> <!--Input for name-->
+                </div>
+                <div class="form-group"><!--form group for insurance number-->
+                    <label for="insuranceNumTextField">Insurance Number</label><!--Label for insurance number-->
+                    <input type="text" class="form-control" id="insurance" placeholder="Enter Insurance Number" name="insuranceNum" required> <!--Input for insurance number-->
+                </div>
+                <div class="form-group"><!--form group for description-->
+                    <label for="descriptionTextField">Description</label><!--Label for description-->
+                    <textarea type="text" class="form-control" id="descriptionTextField" placeholder="Enter the description of the incident" name="description" required></textarea> <!--input for description-->
+                </div>
+                <div class="form-group"><!--form group for date-->
+                    <label for="dateField">Date</label><!--label for date-->
+                    <input type="date" class="form-control" id="dateField" name="date" required><!--input for date-->
+                </div>
+                <div class="form-group"><!--form group for car model-->
+                    <label for="carModelTextField">Car Model</label><!--label for car model-->
+                    <input type="text" class="form-control" id="carModelTextField" placeholder="Enter the Car Model" name="carModel" required> <!--input for car model-->
+                </div>
+                <div class="form-group"><!--form group for licence plate-->
+                    <label for="licencePlate">Licence Plate</label><!--label for licence plate-->
+                    <input type="text" class="form-control" id="licensePlateTextField" placeholder="Enter the price" name="licensePlate" required> <!--input for licence plate-->
+                </div>
+                <br>
+                <button class="btn btn-primary" type="submit"> 
+                    <i class="fas fa-edit"></i> Submit
+                </button> <!--The submit button-->
+                <a href="/records" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel
+                </a> <!--The cancel button-->
+            </form>
+        </div>
+    </div>
+</div>
+<%- include ../partials/footer.ejs %> <!--Footer-->
