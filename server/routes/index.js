@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page with / */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home' });
+  res.render('index', { title: 'Diamond Auto Insurance' });
 });
 
 /* GET home page with /home */
