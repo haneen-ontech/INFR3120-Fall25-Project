@@ -4,16 +4,16 @@ this include stuff is to add the header, nav bar and footer-->
 <%- include('./partials/main_nav.ejs') %>
 
 <!--container, white box holding the code space-->
-<!--<div class="container auto"> -->
     <div class="container my-5 w-75">
         <div class="card shadow-sm border-0 mx-auto" style="max-width: 800px;">
-            <!--adding image of me into the container left side of the text-->
+            <!--badge claiming were num1 in the game to the left-->
             <div class="row g-0 align-items-center">
             <div class="col-md-5">
                 <span class="d-block border border-white rounded p-4 m-4" style="border-width: 2px;">
-                <img src="/Asset/images/AutoBadge.png" class="img-fluid rounded" alt="Photo of Zahra Mirza">
+                <img src="/Asset/images/AutoBadge.png" class="img-fluid rounded" alt="Number 1 Auto Insurance Brand 2024 badge">
             </div>
 
+            <!--card holding text about badge-->
             <div class="col-md-7">
                 <div class="card-body">
                     <p class="card-text fs-2">
@@ -24,16 +24,20 @@ this include stuff is to add the header, nav bar and footer-->
             
         </div>
     </div>
+    <!--seperate container, dicussing the good quailities of the company.-->
+    <!--Containers code sourced from bootstrap-->
     <div class="container text-center my-4">
         <h2>What we can do for you</h1>
         <br>
         <div class="row">
 
+            <!--created three boxes w a border to the end to seperate -->
             <div class="col border-end">
             <h3>Reliable Coverage</h3>
             <p>We’ve got your back on the road. From accidents to theft, our coverage keeps you protected so you can drive with confidence.</p>
             </div>
 
+            <!--another border-end to add a line between the three sections-->
             <div class="col border-end">
             <h3>Quick & Easy Claims</h3>
             <p>Need to file a claim? No worries! Our system makes it super simple to submit and track your reports—fast, easy, and stress-free.</p>
@@ -46,18 +50,25 @@ this include stuff is to add the header, nav bar and footer-->
 
         </div>
     </div>
+    <br><br>
+    <!--another sections to discuss why this company was made-->
     <div class="container text-center my-4">
-        <div class="card shadow-sm border-0 mx-auto w-100">
+        <div class="card shadow-lg border-0 mx-auto w-100"> <br>
         <h3>Our Story</h3>
-        <p>erm this is an assingemnt ..</p>
-        <h1>space killer to check smt</h1>
+        <!-- div here to keep the width of the paragraph less than the w of the container its in-->
+        <div class="w-75 mx-auto">
+        <p>  Founded by three passionate innovators, our auto insurance company was built on a simple mission:
+        to make coverage easy, affordable, and fast for every driver. We believe insurance shouldn’t feel
+        complicated or stressful, so we designed our services to be straightforward, transparent, and
+        accessible. Whether you're getting a quote, filing a claim, or managing your policy, we’re here to
+        make the process smooth, reliable, and centered around you.</p>
+        </div>
+        <!--page break-->
         <br>
         </div>
     </div>
-    <br>
-    <br>
-</div>
-
+    <!--page breaks to allow easy scrolling-->
+    <br><br>
 
 
 <!--footer-->
