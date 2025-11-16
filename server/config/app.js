@@ -1,5 +1,5 @@
 // Hide Mongo URI
-var dotenv = require('dotenv').config();
+var dotenv = require('dotenv').config(); // Load env variables
 
 var createError = require('http-errors');
 var express = require('express');
@@ -17,7 +17,7 @@ var recordsRouter = require('../routes/record')
 var app = express();
 
 // Test DB Connection
-mongoose.connect(DB.mongoURI);
+mongoose.connect(DB.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 let mongoDB = mongoose.connection; 
 mongoDB.on('error', console.error.bind(console, 'Connection error'));
 mongoDB.once('open', ()=>{
