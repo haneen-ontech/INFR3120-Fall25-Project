@@ -43,7 +43,6 @@ router.get('/add', async(req, res, next)=>{
         })
     }
 })
-
 // Post route for processing the add page - Create Operation
 router.post('/add', async(req, res, next)=>{
     try{
@@ -88,7 +87,6 @@ router.get('/edit/:id', async(req, res, next)=>{
         next(err);
     }
 })
-
 // Post route for displaying the edit page - Update Operation
 router.post('/edit/:id', async(req, res, next)=>{
     try{
