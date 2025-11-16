@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <!--linked the logo image to the home page-->
+    <a class="nav-link" aria-current="page" href="/home"><img src="\Asset\Images\headerLogo.png" width="200" class="img-fluid rounded" alt="DIAMOND AUTO INSURANCE"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--nav bar leading to home, about us, contact us, and report pages-->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <% if (title == "Home"){ %>
+          <a class="nav-link active" aria-current="page" href="/home"><i class="fa-solid fa-house fa-large"></i> Home</a>
+          <% } else { %>
+            <a class="nav-link" aria-current="page" href="/home"><i class="fa-solid fa-house fa-large"></i> Home</a>
+          <% } %>
+          </li>
+        <li class="nav-item">
+          <% if (title == "About"){ %>
+          <a class="nav-link active" aria-current="page" href="/about"><i class="fa-solid fa-circle-info fa-large"></i> About</a>
+          <% } else { %>
+          <a class="nav-link" aria-current="page" href="/about"><i class="fa-solid fa-circle-info fa-large"></i> About</a>
+          <% } %>
+        </li>
+        <li class="nav-item">
+          <% if (title == "Records"){ %>
+          <a class="nav-link active" aria-current="page" href="/records"><i class="fa-solid fa-pencil-alt fa-large"></i> Records</a>
+          <% } else { %>
+            <a class="nav-link" aria-current="page" href="/records"><i class="fa-solid fa-pencil-alt fa-large"></i> Records</a>
+          <% } %>
+        </li>
+        </li>
+        <li class="nav-item">
+          <% if (title == "Contact"){ %>
+          <a class="nav-link active" aria-current="page" href="/contactus"><i class="fa-solid fa-phone fa-large"></i> Contact Us</a>
+          <% } else { %>
+            <a class="nav-link" aria-current="page" href="/contactus"><i class="fa-solid fa-phone fa-large"></i> Contact Us</a>
+          <% } %>
+        </li>
+    </div>
+  </div>
+</nav>
