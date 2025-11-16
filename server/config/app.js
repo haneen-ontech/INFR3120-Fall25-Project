@@ -1,3 +1,6 @@
+// Hide Mongo URI
+var dotenv = require('dotenv').config();
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -14,7 +17,7 @@ var recordsRouter = require('../routes/record')
 var app = express();
 
 // Test DB Connection
-mongoose.connect(DB.URI);
+mongoose.connect(DB.mongoURI);
 let mongoDB = mongoose.connection; 
 mongoDB.on('error', console.error.bind(console, 'Connection error'));
 mongoDB.once('open', ()=>{
