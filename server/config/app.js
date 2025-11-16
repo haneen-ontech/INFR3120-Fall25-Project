@@ -17,7 +17,7 @@ var recordsRouter = require('../routes/record')
 var app = express();
 
 // Test DB Connection
-mongoose.connect(DB.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(DB.mongoURI);
 let mongoDB = mongoose.connection; 
 mongoDB.on('error', console.error.bind(console, 'Connection error'));
 mongoDB.once('open', ()=>{
