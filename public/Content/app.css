@@ -1,0 +1,12 @@
+@charset "UTF-8"; 
+
+/*style the banner on home page to be blue*/
+.banner-row{
+    background-color: #0921d7;
+    color: white;
+}
+
+/*style the blurbs on home page to become slightly larger when hovered over*/
+.blurb:hover{
+    scale: 1.03;
+}
