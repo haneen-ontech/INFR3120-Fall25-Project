@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
+<<<<<<< HEAD
     "@types/passport": "^1.0.17",
     "@types/passport-local": "^1.0.38",
     "@types/passport-local-mongoose": "^6.1.5",
@@ -14,18 +15,28 @@
     "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
+=======
+    "bootstrap": "^5.3.8",
+    "cookie-parser": "~1.4.4",
+>>>>>>> efe05946edaa5b1900e031ce620f8a1dd80936cb
     "debug": "~2.6.9",
     "dotenv": "^17.2.3",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+<<<<<<< HEAD
     "express-session": "^1.18.2",
+=======
+>>>>>>> efe05946edaa5b1900e031ce620f8a1dd80936cb
     "http-errors": "~1.6.3",
     "jquery": "^3.7.1",
     "mongoose": "^8.19.3",
     "morgan": "~1.9.1",
+<<<<<<< HEAD
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^8.0.0",
+=======
+>>>>>>> efe05946edaa5b1900e031ce620f8a1dd80936cb
     "popper.js": "^1.16.1"
   }
 }
