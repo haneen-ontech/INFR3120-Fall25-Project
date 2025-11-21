@@ -1,0 +1,67 @@
+<%- include ../partials/header.ejs %>   
+<%- include ../partials/main_nav.ejs %>
+
+<!--Content for adding the book-->
+<div class="container">
+    <div class="row">
+        <!--Center form on screen as well as allow for fluidity-->
+        <div class="offset-md-3 col-md-6">
+            <!--Page title retrieved from server-->
+            <h1><%=title%></h1>
+
+            <!--Form to edit a previously made record-->
+            <form class="form" method="post">
+
+                <!--Name input field-->
+                <!--Type is text with a placeholder as well as a value retrieved from the current object the user is working on (to be changed)-->
+                <div class="form-group">
+                    <label for="nameTextField">Name</label>
+                    <input type="text" class="form-control" id="nameTextField" placeholder="Enter first & last name" name="name" value="<%= Record.name%>" required>
+                </div>
+
+                <!--Insurance number input field-->
+                <div class="form-group">
+                    <label for="insuranceNumTextField">Insurance Number</label>
+                    <input type="text" class="form-control" id="insuranceNumTextField" placeholder="Enter Insurance Number" name="insuranceNum" value="<%= Record.insuranceNum%>" required>
+                </div>
+
+                <!--Description input field-->
+                <!--the <textarea> tag doesn't have a value key word so the current value Record.description is stored between the opening and closing tag-->
+                <div class="form-group">
+                    <label for="descriptionTextField">Description</label>
+                    <textarea type="text" class="form-control" id="descriptionTextField" placeholder="Enter brief description of the incident" name="description" required><%= Record.description%></textarea>
+                </div>
+
+                <!--Date input field-->
+                <!--This has the type date which by default provides a lot of information about the date and time, to keep it simple with just year/month/day information, we use the toIOSString function to split and only take needed information from the date object-->
+                <div class="form-group">
+                    <label for="dateField">Date</label>
+                    <input type="date" class="form-control" id="dateField" name="date" value="<%= Record.date.toISOString().split('T')[0]%>" required>
+                </div>
+
+                <!--Car model input field-->
+                <div class="form-group">
+                    <label for="carModelTextField">Car Model</label>
+                    <input type="text" class="form-control" id="carModelTextField" placeholder="Enter the Car Model" name="carModel" value="<%= Record.carModel%>" required>
+                </div>
+
+                <!--License plate input field-->
+                <div class="form-group">
+                    <label for="licensePlateTextField">License Plate</label>
+                    <input type="text" class="form-control" id="licensePlateTextField" placeholder="Enter the license plate" name="licensePlate" value="<%= Record.licensePlate%>" required>
+                </div>
+                <br>
+
+                <!--Submit button-->
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit
+                </button>
+                <!--Cancel button that goes back to records page-->
+                <a href="/records" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include ../partials/footer.ejs %> 

@@ -1,0 +1,129 @@
+<%- include ./partials/header.ejs %>  <!--Header-->
+<%- include ./partials/main_nav.ejs %> <!--Main Navigation-->
+
+<main class="container my-5"> <!--Main container-->
+  <div class="row">
+    <div class="offset-md-1 col-md-10"> <!--Centered column-->
+
+      <!-- Contact Card -->
+      <div class="card mx-auto" style="width: 600px;"> <!--Card centered with fixed width-->
+        <div class="card-body"> <!--Card body-->
+
+          <h1 class="contactTitle text-center">Contact Us</h1> <!--Contact page Title-->
+          <br>
+
+          <form class="row g-3 needs-validation text-center mx-auto" style="width: 500px;" novalidate> <!--Contact Form-->
+            
+            <!--First name-->
+            <div class="mb-3"> 
+              <label for="firstName" class="form-label">First Name:</label> <!--First name label-->
+              <input type="text" class="form-control" id="firstName" required placeholder="Enter Your First Name"> <!--input first name-->
+              <div class="valid-feedback">Looks good!</div> <!--If valid output-->
+              <div class="invalid-feedback">Please enter your first name.</div> <!--If invalid output-->
+            </div>
+
+            <!--Last name-->
+            <div class="mb-3"> 
+              <label for="lastName" class="form-label">Last Name:</label> <!--First name label-->
+              <input type="text" class="form-control" id="lastName" required placeholder="Enter Your Last Name"> <!--input last name-->
+              <div class="valid-feedback">Looks good!</div> <!--If valid output-->
+              <div class="invalid-feedback">Please enter your last name.</div> <!--If invalid output-->
+            </div>
+
+            <!--Email-->
+            <div class="mb-3"> 
+              <label for="email" class="form-label">Email Address:</label> <!--Email label-->
+              <input type="email" class="form-control" id="email" required placeholder="Enter Your Email"> <!--input email-->
+              <div class="valid-feedback">Looks good!</div> <!--If valid output-->
+              <div class="invalid-feedback">Please enter a valid email address.</div> <!--If invalid output-->
+            </div>
+
+            <!--Comments-->
+            <div class="mb-3"> 
+              <label for="comments" class="form-label">Any Comments:</label> <!--Comment label-->
+              <textarea class="form-control" id="comments" rows="3" placeholder="Enter any Questions or Queries"></textarea> <!--input comments or questions-->
+            </div>
+
+            <!--Submit button-->
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Submit form</button> <!--the submit button-->
+            </div>
+
+
+          </form>
+        </div>
+      </div>
+
+      <br><br>
+
+      <!-- FAQ Card -->
+      <div id="bottom"></div> <!--This is an anchor-->
+
+      <div class="card text-center mx-auto fs-4 w-auto">
+        <div class="card-body">
+          <h1 class="contactTitle text-center">Frequently Asked Questions </h1> <!--FAQ Title-->
+          <p>Here are some FAQs:</p> 
+
+          <!-- FAQ 1 -->
+          <p>
+            <button class="btn btn-secondary w-75" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+              What types of car insurance coverage do you offer? <i class="fa-solid fa-arrow-down"></i>
+            </button> <!--FAQ 1 question with dropdown-->
+          </p>
+          <div class="collapse" id="faq1">
+            <div class="card card-body mx-auto w-75" style="font-size: 1rem;">
+              We offer liability, collision, comprehensive, accident benefits, uninsured motorist coverage, and optional add-ons.
+            </div> <!--FAQ 1 answer-->
+          </div>
+
+          <br> <!--space-->
+
+          <!-- FAQ 2 -->
+          <p>
+            <button class="btn btn-secondary w-75" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+              Will my insurance rate go up after an accident? <i class="fa-solid fa-arrow-down"></i>
+            </button> <!--FAQ 2 question with dropdown-->
+          </p>
+          <div class="collapse" id="faq2">
+            <div class="card card-body mx-auto w-75" style="font-size: 1rem;">
+              Your premium may increase depending on who was at fault, your driving history, and your policy type.
+            </div> <!--FAQ 2 answer-->
+          </div>
+
+          <br> <!--space-->
+
+          <!-- FAQ 3 -->
+          <p>
+            <button class="btn btn-secondary w-75" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+              What should I do immediately after a car accident? <i class="fa-solid fa-arrow-down"></i>
+            </button> <!--FAQ 3 question with dropdown-->
+          </p>
+          <div class="collapse" id="faq3">
+            <div class="card card-body mx-auto w-75" style="font-size: 1rem;">
+              Ensure safety, call emergency services if needed, document the scene, exchange information, and contact your insurer.
+            </div> <!--FAQ 3 answer-->
+          </div>
+
+          <br> <!--space-->
+
+          <!-- FAQ 4 -->
+          <p>
+            <button class="btn btn-secondary w-75" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+              How long does it take to process a claim? <i class="fa-solid fa-arrow-down"></i>
+            </button> <!--FAQ 4 question with dropdown-->
+          </p>
+          <div class="collapse" id="faq4">
+            <div class="card card-body mx-auto w-75" style="font-size: 1rem;">
+              Simple claims may be resolved within a few days; more complex ones can take longer depending on assessments.
+            </div> <!--FAQ 4 answer-->
+          </div> <!--space-->
+
+        </div>
+      </div>
+      <br><br><br><br> <!--space-->
+    </div>
+  </div>
+</main>
+
+<%- include ./partials/footer.ejs %> <!--Footer-->
+<script src="/Script/form_validation.js"></script> <!--This is the validation-->
