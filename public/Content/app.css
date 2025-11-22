@@ -10,3 +10,8 @@
 .blurb:hover{
     scale: 1.03;
 }
+
+.center-wrapper
+{
+    margin-top: 100px;
+}

@@ -1,15 +1,20 @@
-<%- include ../partials/header.ejs %> <%- include ../partials/main_nav.ejs %>
+<%- include ../partials/header.ejs %> <!--The header-->
+<%- include ../partials/main_nav.ejs %> <!--The main navigation bar-->
 
-<main class="container">
-  <% if(message.length > 0) { %>
-  <div class="alert alter danger"><% message %></div>
+<main class="container my-5"> <!--Main container-->
+  <% if(message.length > 0) { %> <!--If there is a message to show-->
+  <div class="alert alter danger"><% message %></div> <!--Display the message-->
   <%}%>
-  <div class="row">
-    <div class="offset-md-4 col-md-4">
-      <h1>Please register</h1>
-      <form method="post" autocomplete="off">
-        <fieldset class="form-group">
-          <label for="username"></label>
+  <div class="row"> <!--Row for layout-->
+    <div class="offset-md-3 col-md-6"> <!--Centered column-->
+      <div class="card mx-auto" style="min-height: 600px; background-color: #113675; box-shadow: 0 0 20px #FADB2d;"> <!--Card with styling-->
+        <div class="card-body text-center" style="padding-top: 80px;"> <!--Card body-->
+
+      <h1 class="mb-4" style="color: white; font-weight: bold;">Please register</h1> <!--Registration title-->
+      <div class="mx-auto" style="width: 100%; max-width: 350px;"> <!--Form container with max width-->
+      <form method="post" autocomplete="off"> <!--Registration form-->
+        <fieldset class="form-group mb-3" style="color: white;"> <!--Username fieldset-->
+          <label for="username"> Enter Username:</label> <!--Username label-->
           <input
             type="text"
             class="form-control"
@@ -17,44 +22,44 @@
             placeholder="Enter username"
             id="username"
             required
-            autofocus />
+            autofocus /> <!--Username input-->
         </fieldset>
-        <fieldset class="form-group">
-          <label for="password"></label>
+        <fieldset class="form-group mb-3" style="color: white;"> <!--Password fieldset-->
+          <label for="password">Enter Password:</label> <!--Password label-->
           <input
             type="password"
             class="form-control"
             name="password"
             placeholder="Enter password"
             id="password"
-            required />
+            required /> <!--Password input-->
         </fieldset>
-        <fieldset class="form-group">
-          <label for="email"></label>
+        <fieldset class="form-group mb-3" style="color: white;"> <!--Email fieldset-->
+          <label for="email">Enter Email:</label> <!--Email label-->
           <input
             type="email"
             class="form-control"
             name="email"
             placeholder="Enter email"
             id="email"
-            required />
+            required /> <!--Email input-->
         </fieldset>
-        <fieldset class="form-group">
-          <label for="displayName"></label>
+        <fieldset class="form-group mb-3" style="color: white;"> <!--Display Name fieldset-->
+          <label for="displayName">Enter Display Name:</label> <!--Display Name label-->
           <input
             type="displayName"
             class="form-control"
             name="displayName"
             placeholder="Enter display name"
             id="displayName"
-            required />
+            required /> <!--Display Name input-->
         </fieldset>
-        <fieldset class="form-group text-right">
-          <input type="submit" class="btn btn-success" value="Register" />
-          <a href="/" class="btn btn-warning">Cancel</a>
+        <fieldset class="form-group text-right mt-4"> <!--Submit and cancel buttons-->
+          <input type="submit" class="btn btn-primary" value="Register" /> <!--Register button-->
+          <a href="/" class="btn btn-warning">Cancel</a> <!--Cancel button-->
         </fieldset>
       </form>
     </div>
   </div>
 </main>
-<%- include ../partials/footer.ejs %>
+<%- include ../partials/footer.ejs %> <!--The footer-->
