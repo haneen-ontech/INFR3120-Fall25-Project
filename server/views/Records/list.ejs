@@ -1,0 +1,94 @@
+<%- include ../partials/header.ejs %>   
+<%- include ../partials/main_nav.ejs %>
+<!--Main content for displaying database-->
+<main class="container vh-100">
+    <div class="row h-100">
+        <div class="offset-md-1 col-md-10 h-100 d-flex flex-column text-center">
+            <br>
+            <h1><%= title %></h1>
+    
+
+            <!-- Centered container for button and table -->
+            <div class="d-flex justify-content-center text-center">
+            <!--contains the width of the tables-->
+            <div style="max-width: 900px; width: 100%;">
+
+            <!--if there is a display name, add a record button appears otherwise it won't show to users not logged in-->
+            <% if(typeof displayName=='string' && displayName) { %>
+            <!--Button that directs user to add a record page-->
+                <a href="/records/add" class="btn btn-info d-inline-block align-self-start" role="button">
+                <i class="fas fa-plus-circle text-center"></i> Add an Incident Report</a> 
+                <br> <br>
+            <% } %>
+
+            <!--Creating a table with bootstrap-->
+            <table class="table table-bordered table-striped table-hover border-dark mx-auto w-auto">
+                <!--if there is a display name we show the user the whole table with edit/delete buttons, else they see a table they can't modify-->
+                <% if(typeof displayName=='string' && displayName) { %>
+                <!--Header Row-->
+                <thead>
+                <tr>
+                    <th class="text-center col-2">Name</th>
+                    <th class="text-center col-2">Insurance #</th>
+                    <th class="text-center col-4">Description</th>
+                    <th class="text-center col-1">Date</th>
+                    <th class="text-center col-2">Car Model</th>
+                    <th class="text-center col-1">License Plate</th>
+                    <th class="text-center col-1">Edit</th>
+                    <th class="text-center col-1">Delete</th>
+                </tr>
+                </thead>
+                <!--For/while loop that goes through each value of an object in the table-->
+                <%for(let count=0; count <RecordList.length; count++) {%>
+                    <tr >
+                        <td class="text-center col-2"><%=RecordList[count].name%></td>
+                        <td class="text-center col-2"><%=RecordList[count].insuranceNum%></td>
+                        <td class="text-center col-4"><%=RecordList[count].description%></td>
+                        <td class="text-center col-1"><%=RecordList[count].date.toISOString().split('T')[0]%></td>
+                        <td class="text-center col-2"><%=RecordList[count].carModel%></td>
+                        <td class="text-center col-1"><%=RecordList[count].licensePlate%></td>
+                        <td class="text-center col-1"> 
+
+                        <!--Edit button that directs users to edit records page-->
+                        <a href="/records/edit/<%=RecordList[count]._id%>" class="btn btn-outline-primary btn-sm">
+                            <i class="fas fa-pencil-alt"></i>Edit</a></td>
+                            <td class="text-center col-1">
+                        <!--Delete button that gets rid of an object completely-->
+                        <a href="/records/delete/<%=RecordList[count]._id%>" class="btn btn-outline-danger btn-sm"> 
+                            <i class="fas fa-trash-alt"></i>Delete</a></td>
+                    </tr>
+        
+                <% } %>
+                <% } else { %>
+                    <!--Header Row-->
+                <thead>
+                <tr class="d-flex">
+                    <th class="text-center col-2">Name</th>
+                    <th class="text-center col-2">Insurance #</th>
+                    <th class="text-center col-4">Description</th>
+                    <th class="text-center col-1">Date</th>
+                    <th class="text-center col-2">Car Model</th>
+                    <th class="text-center col-1">License Plate</th>
+                </tr>
+                </thead>
+                <!--For/while loop that goes through each value of an object in the table-->
+                <%for(let count=0; count <RecordList.length; count++) {%>
+                    <tr class="d-flex">
+                        <td class="text-center col-2"><%=RecordList[count].name%></td>
+                        <td class="text-center col-2"><%=RecordList[count].insuranceNum%></td>
+                        <td class="text-center col-4"><%=RecordList[count].description%></td>
+                        <td class="text-center col-1"><%=RecordList[count].date.toISOString().split('T')[0]%></td>
+                        <td class="text-center col-2"><%=RecordList[count].carModel%></td>
+                        <td class="text-center col-1"><%=RecordList[count].licensePlate%></td>
+                    </tr>
+                <% } %>
+                <% } %>
+            </table>
+            <br>
+            <br>
+            <br>
+
+        </div>
+    </div>
+</main>
+<%- include ../partials/footer.ejs %> 

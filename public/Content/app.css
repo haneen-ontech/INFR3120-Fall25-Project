@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+body {
+  background: #fadb2d;
+  background: linear-gradient(90deg, rgba(250, 219, 45, 0.1) 100%, rgba(255, 247, 173, 0) 0%);
+}
+
+/*shadow colour that compliments the background colour*/
+.custom-shadow {
+  box-shadow: 0 8px 20px #241354;
+}
+
+/*style the banner on home page to be blue*/
+.banner-row {
+  background-color: rgb(17, 54, 117);
+  color: white;
+}
+
+/*style the blurbs on home page to become slightly larger when hovered over*/
+.blurb:hover {
+  scale: 1.03;
+}
+
+.center-wrapper {
+  margin-top: 100px;
+}
+
+/*boxs on the about us page hover*/
+.hover-box {
+  border-radius: 10px;
+  border: none; /*remove border and box shadow pre hover*/
+  box-shadow: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/*for the hover on the about us page*/
+.hover-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(167, 128, 69, 0.25); /* shadow appears only on hover */
+  border: 1px solid rgba(167, 128, 69, 0.15);
+}
