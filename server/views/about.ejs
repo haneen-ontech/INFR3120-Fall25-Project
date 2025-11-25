@@ -3,6 +3,8 @@ this include stuff is to add the header, nav bar and footer-->
 <%- include('./partials/header.ejs') %>
 <%- include('./partials/main_nav.ejs') %>
 
+<!--box to hold this section of the page in another colour-->
+<div class="w-100 py-5" style="background-color: #113675;">
 <!--container, white box holding the code space-->
     <div class="container my-5 w-75">
         <div class="card shadow-sm border-0 mx-auto" style="max-width: 800px;">
@@ -20,10 +22,11 @@ this include stuff is to add the header, nav bar and footer-->
                         Number 1 trust Auto Insurance brand in Onatrio!
                     </p>
                 </div>
-            </div>
-            
+            </div>            
         </div>
     </div>
+</div>
+</div>
     <!--seperate container, dicussing the good quailities of the company.-->
     <!--Containers code sourced from bootstrap-->
     <div class="container text-center my-4">
@@ -32,28 +35,36 @@ this include stuff is to add the header, nav bar and footer-->
         <div class="row">
 
             <!--created three boxes w a border to the end to seperate -->
-            <div class="col border-end">
+            <div class="col border-end ">
+            <div class="hover-box p-4 m-2"> <!--changed all the boxes to be a hover box so shadow appears when touched-->
             <h3>Reliable Coverage</h3>
             <p>We've got your back on the road. From accidents to theft, our coverage keeps you protected so you can drive with confidence.</p>
+            </div>
             </div>
 
             <!--another border-end to add a line between the three sections-->
             <div class="col border-end">
+            <div class="hover-box p-4 m-2"> <!--hover-->
             <h3>Quick & Easy Claims</h3>
             <p>Need to file a claim? No worries! Our system makes it super simple to submit and track your reports—fast, easy, and stress-free.</p>
             </div>
+            </div>
 
             <div class="col">
+            <div class="hover-box p-4 m-2"> <!--hover-->
             <h3>Afforadable</h3>
             <p>Insurance doesn't have to break the bank. We offer flexible plans and discounts to help you get the coverage you need at a price you'll actually like.</p>
+            </div>
             </div>
 
         </div>
     </div>
     <br><br>
+<!--box to change the colour of the page to match out theme-->
+<div class="w-100 py-5" style="background-color: #113675;">
     <!--another sections to discuss why this company was made-->
     <div class="container text-center my-4">
-        <div class="card shadow-lg border-0 mx-auto w-100"> <br>
+        <div class="card custom-shadow border-0 mx-auto w-100"> <br>
         <h3>Our Story</h3>
         <!-- div here to keep the width of the paragraph less than the w of the container its in-->
         <div class="w-75 mx-auto">
@@ -69,7 +80,7 @@ this include stuff is to add the header, nav bar and footer-->
     </div>
     <!--page breaks to allow easy scrolling-->
     <br><br>
-
+</div>
 
 <!--footer-->
 <%- include('./partials/footer.ejs') %>
