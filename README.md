@@ -86,6 +86,6 @@ All pages consist of a bootstrap responsive layout
 
 ## Links
 GitHub Repo: https://github.com/haneen-ontech/INFR3120-Fall25-Project  
-Render Link: https://infr3120-fall25-project-partone.onrender.com/ 
+Render Link: https://infr3120-fall25-project-part2-hlby.onrender.com/ 
 
 
