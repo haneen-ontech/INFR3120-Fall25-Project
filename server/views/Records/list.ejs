@@ -8,7 +8,6 @@
             <h1><%= title %></h1>
             <br>
 
-<<<<<<< HEAD
             <% if(typeof displayName=='string' && displayName) { %>
             <!--Button that directs user to add a record page-->
                 <a href="/records/add" class="btn btn-primary d-inline-block align-self-start" role="button">
@@ -20,16 +19,6 @@
             <!--Creating a table with bootstrap-->
             <table class="table table-bordered table-striped table-hover">
                 <% if(typeof displayName=='string' && displayName) { %>
-=======
-            <!--Button that directs user to add a record page-->
-            <a href="/records/add" class="btn btn-primary d-inline-block align-self-start" role="button">
-                <i class="fas fa-plus-circle"></i> Add an Incident Report
-                </a>
-                <br>
-
-            <!--Creating a table with bootstrap-->
-            <table class="table table-bordered table-striped table-hover">
->>>>>>> efe05946edaa5b1900e031ce620f8a1dd80936cb
                 <!--Header Row-->
                 <tr class="d-flex">
                     <th class="text-center col-2">Name</th>
@@ -62,7 +51,6 @@
                             <i class="fas fa-trash-alt"></i>Delete</a></td>
                     </tr>
                 <% } %>
-<<<<<<< HEAD
                 <% } else { %>
                     <!--Header Row-->
                 <tr class="d-flex">
@@ -87,8 +75,6 @@
                     </tr>
                 <% } %>
                 <% } %>
-=======
->>>>>>> efe05946edaa5b1900e031ce620f8a1dd80936cb
             </table>
             <br>
             <br>
