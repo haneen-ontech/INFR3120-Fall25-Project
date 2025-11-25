@@ -64,7 +64,7 @@ router.post('/login', function(req, res, next){
     }
     if(!user)
     {
-      // if authentication failes
+      // if authentication fails
       req.flash('loginMessage', 'AuthenticationError');
       return res.redirect('/login');
     }
@@ -109,7 +109,7 @@ router.post('/register', function(req, res, next){
   // create new user object
   let newUser = new User({
     username: req.body.username,
-    //password: req.body.password,
+    password: req.body.password,
     email:req.body.email,
     displayName: req.body.displayName
   })

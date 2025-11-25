@@ -2,6 +2,7 @@ let express = require('express')
 let router = express.Router();
 let mongoose = require('mongoose');
 let Record = require('../models/record');
+
 function requireAuth(req, res, next)
 {
     // if user is not authenticated, redirect back to login page
