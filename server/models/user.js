@@ -1,7 +1,12 @@
 // importing libraries/collections required
+
+// import specific fucntions from jQuery
 const {trim, type } = require('jquery')
+// import mongoose for mongodb schema modeling
 let mongoose = require('mongoose');
+// import passport-local-mongoose plugin for handling authentication
 let passportLocalMongoose = require('passport-local-mongoose');
+// import record collection 
 const { collection } = require('./record');
 
 // making our user schema
@@ -10,10 +15,10 @@ let User = mongoose.Schema({
     // username field for authentication
     username: 
     {
-        type:String, 
-        default:"",
-        trim:true,
-        required:"Username is required"
+        type:String, // must be a string
+        default:"", // default empty string
+        trim:true, // remove whitespace from ends
+        required:"Username is required" // validation message if missing
     },
     
     // password field which will be handled by passport-local-mongoose

@@ -79,7 +79,11 @@ All pages consist of a bootstrap responsive layout
 - Navbar and pages using icons: https://fontawesome.com/search
 - Authentication passport: https://www.passportjs.org/
 - Background: https://cssgradient.io
-- 
+
+
+## Bonus Resources
+- Uploading profile picture: https://blog.logrocket.com/multer-nodejs-express-upload-file/?utm_source=chatgpt.com
+- NOTE: this resource was followed closely in order to complete the bonous portion of the assignment
 
 ---
 

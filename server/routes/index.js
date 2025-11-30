@@ -1,35 +1,39 @@
 // import express, passport, database configurations
-var express = require('express');
-var router = express.Router();
-const passport = require('passport');
-let DB = require('../config/db');
+var express = require('express'); // express framework for routing
+var router = express.Router(); // create a router instance
+const passport = require('passport'); // passport for authentication
+let DB = require('../config/db'); // database config (not used directly here)
 
 // ROUTES FOR STATIC PAGES
 
 // importing our user model
 let userModel = require('../models/user');
-let User = userModel.User;
+let User = userModel.User; // user model from mongoose schema
 
 /* GET home page with / */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Diamond Auto Insurance', 
-    displayName: req.user?req.user.displayName:""
-  });
+    displayName: req.user?req.user.displayName:"", user: req.user }); // show user's displayName if logged in and pass full user object
 });
 
 /* GET home page with /home */
 router.get('/home', function(req, res, next) {
-  res.render('index', { title: 'Diamond Auto Insurance', displayName: req.user?req.user.displayName:"" });
+  res.render('index', { title: 'Diamond Auto Insurance', displayName: req.user?req.user.displayName:"", user: req.user });
 });
 
 /* GET about us page */
 router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'About', displayName: req.user?req.user.displayName:"" });
+  res.render('about', { title: 'About', displayName: req.user?req.user.displayName:"",user: req.user });
 });
 
 /* GET contact us page */
 router.get('/contactus', function(req, res, next) {
-  res.render('contactus', { title: 'Contact', displayName: req.user?req.user.displayName:"" });
+  res.render('contactus', { title: 'Contact', displayName: req.user?req.user.displayName:"",user: req.user });
+});
+
+/* GET upload profile page */
+router.get('/upload-profile', (req, res, next) => {
+  res.render('upload-profile', { title: 'Upload Profile Picture', displayName: req.user ? req.user.displayName : "", user: req.user });
 });
 
 // ROUTES FOR LOGIN PAGES
@@ -43,8 +47,7 @@ router.get('/login', function(req, res, next){
       {
         title:'Login',
         message: req.flash('loginMessage') // display flash message if exists 
-      }
-    )
+      });
   }
   else
   {
@@ -62,9 +65,8 @@ router.post('/login', function(req, res, next){
     {
       return next(err);
     }
-    if(!user)
+    if(!user) // if authentication fails
     {
-      // if authentication fails
       req.flash('loginMessage', 'AuthenticationError');
       return res.redirect('/login');
     }

@@ -40,25 +40,51 @@
         </li>
         </ul>
         <!--Added a seperate nav bar section to have the user deatil on the left side-->
-        <ul class="navbar-nav ms-auto">
-        <% if(typeof displayName=='string' && displayName) { %>
-          <li class="navbar-text">
-            <i class="fas fa-lg fa-user"></i>
-            Welcome, <%= displayName %>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        <!--Check if a user is logged in by checking if the displayName exists-->
+        <% if (typeof displayName == "string" && displayName) { %>
+          <li class="nav-item dropdown">
+
+            <!--Dropdown toggle showing user's profile image and display name-->
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" 
+              role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+            <!--Display the user's profile picture from the mongodb field-->
+            <img src="<%= user.profileImage %>" 
+              alt="Profile" 
+              class="rounded-circle me-2" 
+              width="30" height="30">
+
+              <!--Greet the user by their display name-->
+              Welcome, <%= displayName %>
+            </a>
+
+            <!--Dropdown menu items-->
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <!--Link to change prfile picture-->
+                <a class="dropdown-item" href="/upload-profile">
+                  <i class="fa-solid fa-circle-info"></i> Change Picture
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <!--Logout link-->
+                <a class="dropdown-item" href="/logout">
+                  <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+              </li>
+            </ul>
           </li>
+        <% } else { %> <!--If not user is logged in-->
           <li class="nav-item">
-            <a href="/logout" class="nav-link small" >
-              <i class="fas fa-lg fa-sign-out-alt"></i>Logout
+            <a class="nav-link small" href="/login">
+              <i class="fas fa-sign-in-alt"></i> Login
             </a>
           </li>
-          <% } else { %>
-          <li class="nav-item">
-            <a href="/login" class="nav-link small" >
-              <i class="fas fa-lg fa-sign-out-alt"></i>Login
-            </a>
-          </li>
-          <% } %>
-        </ul>
+        <% } %>
+      </ul>
     </div>
   </div>
 </nav>
