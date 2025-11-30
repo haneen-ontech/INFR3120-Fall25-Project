@@ -5,7 +5,7 @@
     <div class="row h-100">
         <div class="offset-md-1 col-md-10 h-100 d-flex flex-column text-center">
             <br>
-            <h1><%= title %></h1>
+            <h1 style="font-weight: bold;"><%= title %></h1>
     
 
             <!-- Centered container for button and table -->
@@ -16,7 +16,7 @@
             <!--if there is a display name, add a record button appears otherwise it won't show to users not logged in-->
             <% if(typeof displayName=='string' && displayName) { %>
             <!--Button that directs user to add a record page-->
-                <a href="/records/add" class="btn btn-info d-inline-block align-self-start" role="button">
+                <a href="/records/add" class="btn d-inline-block align-self-start" style=" background-color:#084bbd; color: white;" role="button"> <!--Add Record Button-->
                 <i class="fas fa-plus-circle text-center"></i> Add an Incident Report</a> 
                 <br> <br>
             <% } %>

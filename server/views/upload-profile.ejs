@@ -1,21 +1,42 @@
-<%- include ./partials/header.ejs %>
-<%- include ./partials/main_nav.ejs %>
+<%- include ./partials/header.ejs %> <!--Header-->
+<%- include ./partials/main_nav.ejs %> <!--Main Navigation-->
 
-<body>
-  <div class="container">
-    <h1>Change Profile Picture</h1>
+<div class="container my-5"> <!--Main container-->
+  <div class="center-wrapper"> <!-- Same wrapper used on login page -->
+  <div class="row"> <!--Row-->
+    <div class="offset-md-3 col-md-6"> <!--Center form on screen as well as allow for fluidity-->
 
-    <form id="uploadForm" method="POST" action="/users/upload-profile" enctype="multipart/form-data">
-      <h3>Hello <%= displayName %>. Change your profile picture here.</h3>
+      <div class="card mx-auto" style="min-height: 500px; background-color: white; box-shadow: 0 0 20px grey;"> <!--Card with styling-->
+        <div class="card-body text-center" style="padding-top: 125px;"> <!--Card body-->
+          <h1 class="text-center mb-4" style="font-weight: bold;">Change Profile Picture</h1> <!--Page title retrieved from server-->
+          <div class="mx-auto" style="width: 100%; max-width: 450px;"> <!--Form container with max width-->
 
-      <div class="mb-3">
-        <label for="profilePic" class="form-label">Select profile picture</label>
-        <input id="profilePic" name="profilePic" type="file" accept="image/*" required class="form-control">
+        <form id="uploadForm" method="POST" action="/users/upload-profile" enctype="multipart/form-data"> <!--Form to upload profile picture-->
+
+          <h3 class="text-center mb-3" style="font-size: 18px;"> 
+            Hello <%= displayName %>. Change your profile picture here.
+          </h3> <!--Greeting with display name-->
+
+          <div class="mb-3"> <!--File input field-->
+            <label for="profilePic" class="form-label">
+              Select profile picture
+            </label> <!--Label for file input-->
+            <input id="profilePic" 
+                   name="profilePic" 
+                   type="file" 
+                   accept="image/*" 
+                   required 
+                   class="form-control">
+          </div> <!--File input field-->
+
+          <button class="btn btn-primary w-100" type="submit">
+            Upload
+          </button> <!--Upload button-->
+        </form>
+        </div>
       </div>
-
-      <button class="btn btn-primary" type="submit">Upload</button>
-    </form>
+    </div>
   </div>
-</body>
-
-<%- include ./partials/footer.ejs %>
+</div>
+</main>
+<%- include ./partials/footer.ejs %> <!--Footer-->

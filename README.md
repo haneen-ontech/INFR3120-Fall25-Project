@@ -87,7 +87,7 @@ All pages consist of a bootstrap responsive layout
 - Uploading profile picture: https://www.loginradius.com/blog/engineering/upload-files-with-node-and-multer 
 - Learning to use Multer: https://expressjs.com/en/resources/middleware/multer.html
 
-- NOTE: these resource was followed closely in order to complete the bonous portion of the assignment, learned how to yse multer through these
+- NOTE: these resource was followed closely in order to complete the bonus portion of the assignment, learned how to use Multer through these
 
 ---
 
