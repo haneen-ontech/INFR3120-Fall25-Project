@@ -61,6 +61,13 @@ let User = mongoose.Schema({
         type:Date, 
         default:Date.now,
     },
+    
+    // profile image field to store the url of the user's profile picture
+    profileImage: 
+    { 
+        type: String, 
+        default: '/Asset/Images/profile.png' // default profile picture
+    }
 },
 {
     // specifying mongoose collection name

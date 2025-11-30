@@ -1,0 +1,21 @@
+<%- include ./partials/header.ejs %>
+<%- include ./partials/main_nav.ejs %>
+
+<body>
+  <div class="container">
+    <h1>Change Profile Picture</h1>
+
+    <form id="uploadForm" method="POST" action="/users/upload-profile" enctype="multipart/form-data">
+      <h3>Hello <%= displayName %>. Change your profile picture here.</h3>
+
+      <div class="mb-3">
+        <label for="profilePic" class="form-label">Select profile picture</label>
+        <input id="profilePic" name="profilePic" type="file" accept="image/*" required class="form-control">
+      </div>
+
+      <button class="btn btn-primary" type="submit">Upload</button>
+    </form>
+  </div>
+</body>
+
+<%- include ./partials/footer.ejs %>

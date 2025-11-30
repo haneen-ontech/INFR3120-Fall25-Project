@@ -31,6 +31,7 @@ It currently includes four main pages:
 - **JavaScript**  
 - **Node.js**  
 - **MongoDB**  
+- **Multer**
 
 Course material from **INFR3120** guided the structure, and we used Bootstrap and FontAwesome as external libraries.
 
@@ -83,7 +84,10 @@ All pages consist of a bootstrap responsive layout
 
 ## Bonus Resources
 - Uploading profile picture: https://blog.logrocket.com/multer-nodejs-express-upload-file/?utm_source=chatgpt.com
-- NOTE: this resource was followed closely in order to complete the bonous portion of the assignment
+- Uploading profile picture: https://www.loginradius.com/blog/engineering/upload-files-with-node-and-multer 
+- Learning to use Multer: https://expressjs.com/en/resources/middleware/multer.html
+
+- NOTE: these resource was followed closely in order to complete the bonous portion of the assignment, learned how to yse multer through these
 
 ---
 

@@ -1,4 +1,4 @@
-// The code below was strongly pulled from this resource: https://blog.logrocket.com/multer-nodejs-express-upload-file/?utm_source=chatgpt.com
+// The code below was strongly pulled from these resources: https://blog.logrocket.com/multer-nodejs-express-upload-file/?utm_source=chatgpt.com AND https://www.loginradius.com/blog/engineering/upload-files-with-node-and-multer  
 // using multer to do profile picture component
 
 
