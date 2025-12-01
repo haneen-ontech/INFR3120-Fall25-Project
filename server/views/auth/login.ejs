@@ -3,10 +3,35 @@
 
 <main class="container my-5"> <!--Main container-->
         <div class="center-wrapper"> <!--Center wrapper to center the card-->
-    <% if(message.length > 0) { %> <!--If there is a message to show-->
-        <div class="alert alter danger"> 
-            <% message %> <!--Display the message-->
+    <% if(message && message.length > 0) { %> <!--If there is a message to show-->
+  <!-- pop up telling user they entered username or password incorrectly-->
+  <div id="errorModal" class="modal fade show" tabindex="-1" style="display:block;" aria-modal="true" role="dialog">
+    <div class="modal-dialog modal-dialog">
+      <div class="modal-content">
+        <!--header text for box-->
+        <div class="modal-header bg-primary text-white text-center">
+          <h5 class="modal-title">Login Error</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closeErrorModal()"></button>
         </div>
+        <!--message from user.js-->
+        <div class="modal-body">
+          <p><%= message %></p>
+        </div>
+        <!--button to exit-->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeErrorModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function closeErrorModal() {
+      document.getElementById("errorModal").style.display = "none";
+    }
+  </script>
+
+
     <%}%>
     <div class="row"> <!--Row for layout-->
     <div class="offset-md-3 col-md-6"> <!--Centered column-->

@@ -7,65 +7,91 @@
   <!--Main container-->
   <div class="row">
     <div class="offset-md-1 col-md-10">
+      <div
+        class="card mx-auto"
+        style="
+          min-height: 500px;
+          background-color: white;
+          box-shadow: 0 0 20px #e3d0b0;
+          border-radius: 15px;
+          width: 600px;
+        ">
+        <!--Card with styling-->
+        <div class="card-body text-center" style="padding-top: 40px">
+          <!--Card body-->
 
-      <div class="card mx-auto" style="min-height: 500px; background-color: white; box-shadow: 0 0 20px grey; border-radius: 15px; width: 600px;"> <!--Card with styling-->
-        <div class="card-body text-center" style="padding-top: 40px;"> <!--Card body-->
-
-          <h1 class="contactTitle text-center" style="font-weight: bold;">Contact Us</h1> <!--Title-->
-          <br/>
+          <h1 class="contactTitle text-center" style="font-weight: bold">Contact Us</h1>
+          <!--Title-->
+          <br />
 
           <form
             class="row g-3 needs-validation text-center mx-auto"
             style="width: 500px"
-            novalidate> <!--Contact Form-->
+            novalidate>
+            <!--Contact Form-->
 
             <!--First name-->
-            <div class="mb-3"> <!--First name input field-->
-              <label for="firstName" class="form-label">First Name:</label> <!--First name label-->
+            <div class="mb-3">
+              <!--First name input field-->
+              <label for="firstName" class="form-label">First Name:</label>
+              <!--First name label-->
               <input
                 type="text"
                 class="form-control"
                 id="firstName"
                 required
-                placeholder="Enter Your First Name" /> <!--input first name-->
-              <div class="valid-feedback">Looks good!</div> <!--If valid output-->
-              <div class="invalid-feedback">Please enter your first name.</div> <!--If invalid output-->
+                placeholder="Enter Your First Name" />
+              <!--input first name-->
+              <div class="valid-feedback">Looks good!</div>
+              <!--If valid output-->
+              <div class="invalid-feedback">Please enter your first name.</div>
+              <!--If invalid output-->
             </div>
 
             <!--Last name-->
             <div class="mb-3">
-              <label for="lastName" class="form-label">Last Name:</label> <!--Last name label-->
+              <label for="lastName" class="form-label">Last Name:</label>
+              <!--Last name label-->
               <input
                 type="text"
                 class="form-control"
                 id="lastName"
                 required
-                placeholder="Enter Your Last Name"/> <!--input last name-->
-              <div class="valid-feedback">Looks good!</div> <!--If valid output-->
-              <div class="invalid-feedback">Please enter your last name.</div> <!--If invalid output-->
+                placeholder="Enter Your Last Name" />
+              <!--input last name-->
+              <div class="valid-feedback">Looks good!</div>
+              <!--If valid output-->
+              <div class="invalid-feedback">Please enter your last name.</div>
+              <!--If invalid output-->
             </div>
 
             <!--Email-->
             <div class="mb-3">
-              <label for="email" class="form-label">Email Address:</label> <!--Email label-->
+              <label for="email" class="form-label">Email Address:</label>
+              <!--Email label-->
               <input
                 type="email"
                 class="form-control"
                 id="email"
                 required
-                placeholder="Enter Your Email"/> <!--input email-->
-              <div class="valid-feedback">Looks good!</div> <!--If valid output-->
-              <div class="invalid-feedback">Please enter a valid email address.</div> <!--If invalid output-->
+                placeholder="Enter Your Email" />
+              <!--input email-->
+              <div class="valid-feedback">Looks good!</div>
+              <!--If valid output-->
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+              <!--If invalid output-->
             </div>
 
             <!--Comments-->
             <div class="mb-3">
-              <label for="comments" class="form-label">Any Comments:</label> <!--Comment label-->
+              <label for="comments" class="form-label">Any Comments:</label>
+              <!--Comment label-->
               <textarea
                 class="form-control"
                 id="comments"
                 rows="3"
-                placeholder="Enter any Questions or Queries"></textarea> <!--input comments or questions-->
+                placeholder="Enter any Questions or Queries"></textarea>
+              <!--input comments or questions-->
             </div>
 
             <!--Submit button-->
@@ -77,15 +103,27 @@
         </div>
       </div>
 
-      <br /><br/>
+      <br /><br />
 
       <!-- FAQ Card -->
       <div id="bottom"></div>
       <!--This is an anchor-->
 
-      <div class="card text-center mx-auto fs-4" style="background-color: white; box-shadow: 0 0 20px grey; border-radius: 15px; width: 700px;"> <!--Card with styling-->
-        <div class="card-body"> <!--Card body-->
-          <h1 class="contactTitle text-center" style="font-weight: bold;">Frequently Asked Questions</h1> <!--Title-->
+      <div
+        class="card text-center mx-auto fs-4"
+        style="
+          background-color: white;
+          box-shadow: 0 0 20px #e3d0b0;
+          border-radius: 15px;
+          width: 700px;
+        ">
+        <!--Card with styling-->
+        <div class="card-body">
+          <!--Card body-->
+          <h1 class="contactTitle text-center" style="font-weight: bold">
+            Frequently Asked Questions
+          </h1>
+          <!--Title-->
           <!--FAQ Title-->
           <p>Here are some FAQs:</p>
 
@@ -100,17 +138,20 @@
               aria-expanded="false"
               aria-controls="faq1">
               What types of car insurance coverage do you offer?
-              <i class="fa-solid fa-arrow-down"></i> 
-            </button> <!--FAQ 1 question with dropdown-->
+              <i class="fa-solid fa-arrow-down"></i>
+            </button>
+            <!--FAQ 1 question with dropdown-->
           </div>
           <div class="collapse" id="faq1">
             <div class="card card-body mx-auto w-75" style="font-size: 1rem">
               We offer liability, collision, comprehensive, accident benefits, uninsured motorist
               coverage, and optional add-ons.
-            </div> <!--FAQ 1 answer-->
+            </div>
+            <!--FAQ 1 answer-->
           </div>
 
-          <br /> <!--space-->
+          <br />
+          <!--space-->
 
           <!-- FAQ 2 -->
           <div>
@@ -122,16 +163,19 @@
               aria-expanded="false"
               aria-controls="faq2">
               Will my insurance rate go up after an accident? <i class="fa-solid fa-arrow-down"></i>
-            </button> <!--FAQ 2 question with dropdown-->
+            </button>
+            <!--FAQ 2 question with dropdown-->
           </div>
           <div class="collapse" id="faq2">
             <div class="card card-body mx-auto w-75" style="font-size: 1rem">
               Your premium may increase depending on who was at fault, your driving history, and
               your policy type.
-            </div> <!--FAQ 2 answer-->
+            </div>
+            <!--FAQ 2 answer-->
           </div>
 
-          <br/> <!--space-->
+          <br />
+          <!--space-->
 
           <!-- FAQ 3 -->
           <div>
@@ -144,16 +188,19 @@
               aria-controls="faq3">
               What should I do immediately after a car accident?
               <i class="fa-solid fa-arrow-down"></i>
-            </button> <!--FAQ 3 question with dropdown-->
+            </button>
+            <!--FAQ 3 question with dropdown-->
           </div>
           <div class="collapse" id="faq3">
             <div class="card card-body mx-auto w-75" style="font-size: 1rem">
               Ensure safety, call emergency services if needed, document the scene, exchange
               information, and contact your insurer.
-            </div> <!--FAQ 3 answer-->
+            </div>
+            <!--FAQ 3 answer-->
           </div>
 
-          <br/> <!--space-->
+          <br />
+          <!--space-->
 
           <!-- FAQ 4 -->
           <div>
@@ -165,21 +212,26 @@
               aria-expanded="false"
               aria-controls="faq4">
               How long does it take to process a claim? <i class="fa-solid fa-arrow-down"></i>
-            </button> <!--FAQ 4 question with dropdown-->
+            </button>
+            <!--FAQ 4 question with dropdown-->
           </div>
           <div class="collapse" id="faq4">
-            <div class="card card-body mx-auto w-75" style="font-size: 1rem"> 
+            <div class="card card-body mx-auto w-75" style="font-size: 1rem">
               Simple claims may be resolved within a few days; more complex ones can take longer
               depending on assessments.
-            </div> <!--FAQ 4 answer-->
+            </div>
+            <!--FAQ 4 answer-->
           </div>
-          <br/><!--space-->
+          <br /><!--space-->
         </div>
       </div>
-      <br/><br/><br/><br/> <!--space-->
+      <br /><br /><br /><br />
+      <!--space-->
     </div>
   </div>
 </main>
 
-<%- include ./partials/footer.ejs %> <!--Footer-->
-<script src="/Script/form_validation.js"></script> <!--This is the validation-->
+<%- include ./partials/footer.ejs %>
+<!--Footer-->
+<script src="/Script/form_validation.js"></script>
+<!--This is the validation-->

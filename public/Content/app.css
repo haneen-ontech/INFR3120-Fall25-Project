@@ -10,9 +10,14 @@ body {
   box-shadow: 0 8px 20px #241354;
 }
 
+/*shadow colour that compliments the background colour*/
+.custom-shadow2 {
+  box-shadow: 0 8px 20px #e3d0b0;
+}
+
 /*style the banner on home page to be blue*/
 .banner-row {
-  background-color: rgb(17, 54, 117);
+  background-color: #113675;
   color: white;
 }
 
