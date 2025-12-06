@@ -5,9 +5,9 @@ This first release is the initial version of our group web application for **INF
 The goal for Part 1 was to set up the basic site structure, build the main pages, implement CRUD functionality, collaborate via GitHub, and deploy the project online.
 
 Authors: **Haneen Al-musowi** (100959563), **Areeba Alam** (100978323), **Zahra Mirza** (100968317)
-- Haneen (Home Page, RU)
-- Areeba (Contact Page, CD)
-- Zahra  (About Us Page, Partials, Logo)
+- Haneen (Home Page, RU, Authentication, Profile Icon)
+- Areeba (Contact Page, CD, Style for: icon upload, register, login, add, edit)
+- Zahra  (About Us Page, Partials, Logo, Style for: records page + additional styling for original pages)
 
 ---
 
@@ -80,6 +80,7 @@ All pages consist of a bootstrap responsive layout
 - Navbar and pages using icons: https://fontawesome.com/search
 - Authentication passport: https://www.passportjs.org/
 - Background: https://cssgradient.io
+- Pop up Alert: https://sweetalert2.github.io
 
 
 ## Bonus Resources
