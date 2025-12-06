@@ -1,4 +1,4 @@
-# INFR3120 – Project Part 1
+# INFR3120 – Project Part 3
 
 ## Project Overview
 This first release is the initial version of our group web application for **INFR3120 – Web & Scripting Programming**.  
